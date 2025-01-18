@@ -27,7 +27,7 @@ def hrb(value, digits= 2, delim= "", postfix=""):
     if value is None:
         return None
     chosen_unit = "B"
-    for unit in ("KiB", "MiB", "GiB", "TiB"):
+    for unit in ("KB", "MB", "GB", "TB"):
         if value > 1000:
             value /= 1024
             chosen_unit = unit
@@ -94,7 +94,7 @@ async def progress_bar(current, total, reply, start):
             progress_bar = "▪️" * completed_length + "▫️" * remaining_length
             
             try:
-                await reply.edit(f'<b>\n ╭──⌯════🆄︎ᴘʟᴏᴀᴅɪɴɢ⬆️⬆️═════⌯──╮ \n├⚡ {progress_bar}|﹝{perc}﹞ \n├🚀 Speed » {sp} \n├📟 Processed » {cur}\n├🧲 Size - ETA » {tot} - {eta} \n├🤖 𝔹ʏ » @VJ_Botz\n╰─═══ ✪ @VJ_Botz ✪ ═══─╯\n</b>') 
+                await reply.edit(f'<b>\n ╭──⌯════👜Downloading👜════⌯──╮ \n├🛡️ {progress_bar}|﹝{perc}﹞ \n├🚀 Speed » {sp} \n├📟 Processed » {cur}\n├🧲 Size - ETA » {tot} - {eta} \n╰─═══👜Sitara👜═══─╯\n</b>') 
             except FloodWait as e:
                 time.sleep(e.x)
 
