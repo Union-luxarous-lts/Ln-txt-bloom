@@ -31,7 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["kya"]))
 async def start(bot: Client, m: Message):
-    await m.reply_text(f"<b>Hey {m.from_user.mention} \n\n I am Allen lecture downloadloader.</b>"
+    await m.reply_text(f"<b>Hey {m.from_user.mention} 🍝\n\n I am Allen lecture downloadloader.</b>"
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
@@ -64,7 +64,7 @@ async def upload(bot: Client, m: Message):
            return
     
    
-    await editable.edit(f"**downloading no. ** **{len(links)}**\n\n**𝕊ᴇɴᴅ 𝔽ʀᴏᴍ ᴡʜᴇʀᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ɪɴɪᴛɪᴀʟ ɪ𝕤** **1**")
+    await editable.edit(f"**downloading no. ** **{len(links)}**\n\n**INITIAL NUMBER𝕤** **1**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text = input0.text
     await input0.delete(True)
@@ -188,7 +188,7 @@ async def upload(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶 »**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL »** `{url}`"
+                    Show = f"**🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶**\n\n**📝Name »** `{name}\nQuality » {raw_text2}`\n\n**🔗URL »** `{url}`"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
