@@ -31,7 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["kya"]))
 async def start(bot: Client, m: Message):
-    await m.reply_text(f"<b>Hey{m.from_user.mention} !
+    await m.reply_text(f"<b>Hey {m.from_user.mention} \n\n I am Allen lecture downloadloader.</b>"
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
