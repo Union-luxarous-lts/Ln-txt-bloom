@@ -31,7 +31,8 @@ bot = Client(
 
 @bot.on_message(filters.command(["kya"]))
 async def start(bot: Client, m: Message):
-    await m.reply_text(f"<b>Hey {m.from_user.mention} 🍝\n\n I am Allen lecture downloadloader.</b>"
+    await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\n I Am allen lecture Downloader bot.\n\nUse /stop to stop any ongoing task.</b>")
+
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
